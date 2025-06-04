@@ -1,0 +1,30 @@
+:root {
+    --color-one:#EFEFEF;
+    --color-two:#67737A;
+    --color-three:#202135;
+    --color-four:#75C2F0;
+    --color-five:#A020F0;
+}
+@font-face {
+    font-family: 'Ezra';
+    src: url('/assets/fonts/ElzaTextTrial-Regular.otf') format('opentype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Ezra Medium';
+    src: url('/assets/fonts/ElzaTrial-Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Ezra Semibold';
+    src: url('/assets/fonts/ElzaTrial-Semibold.otf') format('opentype');
+    font-weight: bold;
+}
+
+.logo img {
+    max-width: 300px !important;
+    max-height: 100px !important;
+    filter: invert(94%) sepia(100%) saturate(31%) hue-rotate(120deg) brightness(109%) contrast(106%);
+}
+
+
+
