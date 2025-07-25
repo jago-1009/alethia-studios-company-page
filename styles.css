@@ -1,30 +1,140 @@
 :root {
-    --color-one:#EFEFEF;
-    --color-two:#67737A;
-    --color-three:#202135;
-    --color-four:#75C2F0;
-    --color-five:#A020F0;
+    --color-one: #EFEFEF;
+    --color-two: #67737A;
+    --color-three: #202135;
+    --color-four: #75C2F0;
+    --color-five: #A020F0;
 }
+
 @font-face {
     font-family: 'Ezra';
     src: url('/assets/fonts/ElzaTextTrial-Regular.otf') format('opentype');
     font-weight: normal;
 }
+
 @font-face {
     font-family: 'Ezra Medium';
     src: url('/assets/fonts/ElzaTrial-Medium.otf') format('opentype');
 }
+
 @font-face {
     font-family: 'Ezra Semibold';
     src: url('/assets/fonts/ElzaTrial-Semibold.otf') format('opentype');
     font-weight: bold;
 }
 
-.logo img {
-    max-width: 300px !important;
-    max-height: 100px !important;
-    filter: invert(94%) sepia(100%) saturate(31%) hue-rotate(120deg) brightness(109%) contrast(106%);
+body {
+    margin: 0;
+}
+nav {
+    background-color: var(--color-one);
+    width: 100%;
+    z-index: 99999;    height:50px;
+    display:flex;
+    justify-content: flex-end;
+}
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-three);
+    font-family: 'Ezra Medium', sans-serif;
+    font-size: 18px;
+}
+.row {
+    display: flex;
+    margin-top:40px;
+}
+.row-text {
+    padding-left: 20px;
+    color: var(--color-three);
+}
+h2 {
+    font-family: 'Ezra Medium', sans-serif;
+    color: var(--color-three);
+    font-size: 48px;
+}
+p {
+    font-family: 'Ezra', sans-serif;
+    color: var(--color-three);
+    font-size: 24px;
+}
+
+.row img {
+    max-width: 500px;
+    
+    height: auto;
+    margin: 24px;
+    width: 100%;
+}
+
+.row-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    max-height: fit-content !important;
+    max-width: fit-content !important;
+    filter: invert(100%);
+    width: 100%;
+}
+
+header h1 {
+    font-family: "Ezra Semibold", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: linear-gradient(to right, var(--color-four), var(--color-five));
+    background-size: 400% 400%;
+    color: var(--color-one);
+    padding: 20px;
+    text-align: center;
+    animation: gradient 15s ease infinite;
 }
 
 
-
+@media screen and (max-width: 768px) {
+    .row {
+      flex-wrap: wrap;
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 32px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        font-size: 16px;
+    }
+    
+    .row-text {
+        padding-left: 10px;
+    }
+    
+    .row img {
+        max-width: 100%;
+        margin: 12px;
+    }
+    
+}
