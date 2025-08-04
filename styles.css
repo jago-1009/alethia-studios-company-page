@@ -25,6 +25,11 @@
 
 body {
     margin: 0;
+    width: 100%;
+}
+* {
+        overflow-x: hidden !important;
+
 }
 nav {
     background-color: var(--color-one);
@@ -54,33 +59,91 @@ nav ul li a {
     display: flex;
     margin-top:40px;
 }
+.row.column {
+    flex-direction: column;
+}
 .row-text {
     padding-left: 20px;
     color: var(--color-three);
 }
+.center {
+    text-align: center;
+   
+}
+.justify-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.center * {
+    text-align: center;
+}
 h2 {
     font-family: 'Ezra Medium', sans-serif;
     color: var(--color-three);
-    font-size: 48px;
+    font-size: clamp(24px, 3vw, 32px);
 }
-p {
+.card {
+    margin: 20px;
+    padding:20px;
+    width: 20%;
+    min-width: clamp(250px, 30vw, 350px);
+    border-radius: 30px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+height:250px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    
+}
+.card h3 {
     font-family: 'Ezra', sans-serif;
     color: var(--color-three);
     font-size: 24px;
 }
-
+.card p {
+    font-family: 'Ezra', sans-serif;
+    color: var(--color-two);
+    font-size: clamp(16px, 2vw, 20px);
+}
+p {
+    font-family: 'Ezra', sans-serif;
+    color: var(--color-three);
+    font-size: clamp(12px, 2vw, 20px);
+}
+.gray {
+    background-color: var(--color-one);
+   
+}
+.row p {
+    width: 80%;
+}
 .row img {
     max-width: 500px;
     
     height: auto;
     margin: 24px;
     width: 100%;
+    min-width: clamp(250px, 30vw, 350px);
 }
 
 .row-img {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.row a {
+    text-decoration: none;
+    background-color: var(--color-five);
+    padding:16px;
+    border-radius: 30px;
+    color: var(--color-one);
+    font-family: 'Ezra Medium', sans-serif;
+    font-size: 18px;
+    
 }
 
 header img {
@@ -108,7 +171,6 @@ header {
     animation: gradient 15s ease infinite;
 }
 
-
 @media screen and (max-width: 768px) {
     .row {
       flex-wrap: wrap;
@@ -116,6 +178,11 @@ header {
     
 }
 @media screen and (max-width: 480px) {
+  
+    .card {
+
+        margin:0;
+    }
     header h1 {
         font-size: 32px;
     }
@@ -133,8 +200,11 @@ header {
     }
     
     .row img {
-        max-width: 100%;
+        max-width: 85%;
         margin: 12px;
+    }
+    .end {
+        margin-right: 0;
     }
     
 }
