@@ -8,18 +8,18 @@
 
 @font-face {
     font-family: 'Ezra';
-    src: url('/assets/fonts/ElzaTextTrial-Regular.otf') format('opentype');
+    src: url('/assets/fonts/fonnts.com-Elza_Text.otf') format('opentype');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Ezra Medium';
-    src: url('/assets/fonts/ElzaTrial-Medium.otf') format('opentype');
+    src: url('/assets/fonts/fonnts.com-Elza_Medium.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Ezra Semibold';
-    src: url('/assets/fonts/ElzaTrial-Semibold.otf') format('opentype');
+    src: url('/assets/fonts/fonnts.com-Elza_Text_Semibold.otf') format('opentype');
     font-weight: bold;
 }
 
@@ -27,9 +27,12 @@ body {
     margin: 0;
     width: 100%;
 }
-* {
-        overflow-x: hidden !important;
-
+#about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 80%;
 }
 nav {
     background-color: var(--color-one);
@@ -96,7 +99,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-    
+    transition-duration: 0.3s;
 }
 .card h3 {
     font-family: 'Ezra', sans-serif;
@@ -118,7 +121,7 @@ p {
    
 }
 .row p {
-    width: 80%;
+    width: 100%;
 }
 .row img {
     max-width: 500px;
@@ -128,7 +131,10 @@ p {
     width: 100%;
     min-width: clamp(250px, 30vw, 350px);
 }
-
+#contact-us {
+    height:100vh;
+    max-height: 300px;
+}
 .row-img {
     display: flex;
     flex-direction: column;
@@ -170,7 +176,15 @@ header {
     text-align: center;
     animation: gradient 15s ease infinite;
 }
-
+.card-img {
+    border-radius: 20px;
+    /* border: 7px solid var(--color-three); */
+    filter:drop-shadow(4px 8px 8px rgba(0, 0, 0, .2))
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
 @media screen and (max-width: 768px) {
     .row {
       flex-wrap: wrap;
