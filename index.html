@@ -10,8 +10,22 @@
 </head>
 
 <body>
+  <section class="mobile-nav"> <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
+  <label class="menu-icon" for="menu-btn">
+    <span class="navicon" aria-label="Hamburger menu 'icon'" />
+  </label>
+  <nav class="menu-mobile">
+   <ul class="navbar-mobile" id="navbar-mobile" role="navigation">
+        <li><a href="#about-us">Who We Are</a></li>
+        <li><a href="#our-services">Our Services</a></li>
+        <li><a href="#our-work">Our Work</a></li>
+        <li ><a href="#founder">Our Founder</a></li>
+        <li ><a href="#contact-us">Contact us</a></li>
+      </ul>
+  </nav></section>
+
   <nav>
-      <ul>
+      <ul class="navbar-desktop" id="navbar-desktop" role="navigation">
         <li><a href="#about-us">Who We Are</a></li>
         <li><a href="#our-services">Our Services</a></li>
         <li><a href="#our-work">Our Work</a></li>
@@ -31,7 +45,7 @@
             </section>
   </header>
   <main>
-    
+    <div class="main-body">
     <section class="row intro" id="about-us">
       <div class="row-text center" >
       <h2>Welcome to Alethia Studios</h2>
@@ -46,7 +60,7 @@ We’re always open to creative partnerships—reach out and let’s make someth
    <section class="row column" id="our-services">
       <div class="row-text center">
         <h2>Our Services</h2>
-        <div class="row justify-center" style="padding:24px;">
+        <div class="row justify-center cards" >
           <div class="card">
             <h3>Game Design and QA Testing</h3>
             <p>Creative, inclusive game design backed by thorough quality assurance testing.</p>
@@ -73,6 +87,7 @@ We’re always open to creative partnerships—reach out and let’s make someth
         </div>
       </div>
       </section>
+      </div>
       <section class="row column gray" id="our-work">
         <div class="row-text center">
           <h2>Our Work</h2>
@@ -94,7 +109,7 @@ We’re always open to creative partnerships—reach out and let’s make someth
          
         </div>
         </section>
-     <section class="row column" id="founder">
+     <section class="row intro column" id="founder">
         <div class="row-text center">
           <h2>About Our founder</h2>
           <p class="cta-text">Imani Peters is the founder of Alethia Studios, a multimedia company dedicated to creating innovative games and experiences that inspire and connect. She graduated from Indiana University with a Bachelor’s degree in Media Arts, specializing in Game Design and 3D Graphics & Animation. With extensive experience in project management and a passion for collaboration, Imani thrives in leading multidisciplinary teams to bring creative visions to life. Drawing on her passion for storytelling, visual artistry, and interactive experiences, Imani is building Alethia Studios as a space for imaginative worlds and meaningful narratives to thrive.</p>
