@@ -1,11 +1,13 @@
   import { Resend } from 'resend';
-  export const config = {
-  runtime: 'edge',
-};
+
 
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     export default async function handler(req, res) {
+      if (req.method !== 'POST') {
+    return res.status(405).json({ success: false, error: 'Method not allowed' });
+  }
+
       if (req.method === 'POST') {
         const { name,email,company,timeline,details } = req.body;
         const subject = `New Contact Form Submission from ${name}`;
