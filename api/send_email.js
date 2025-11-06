@@ -21,7 +21,7 @@
           `
         try {
           await resend.emails.send({
-            from: 'alethiastudiosllc@gmail.com', 
+            from: 'Interest Form <noreply@alethiastudios.net>', 
             to: 'alethiastudiosllc@gmail.com',
             subject: subject,
             html: body,
