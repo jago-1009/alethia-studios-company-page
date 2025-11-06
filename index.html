@@ -130,7 +130,7 @@ We’re always open to creative partnerships—reach out and let’s make someth
             </div>
             <div class="row column" style="margin-left: 24px; margin-top:0px;">
               <h3>Get in contact with us</h3>
-              <form action="/send_email" method="POST" class="row column" style="margin-top:0px;">
+              <form  class="row column" id="contactForm" style="margin-top:0px;">
               <input type="text" placeholder="Name (required)" name="name" class="input-field">
               <input type="email" placeholder="Email (required)" name="email" class="input-field">
               <input type="text" placeholder="Company" name="company" class="input-field">
@@ -149,7 +149,34 @@ We’re always open to creative partnerships—reach out and let’s make someth
 
 
 
+<script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert('Thank you for contacting us! We will get back to you soon.');
+        form.reset();
+      } else {
+        alert('There was a problem submitting your form. Please try again later.');
+      }
+    } catch (error) {
+      alert('There was a problem submitting your form. Please try again later.');
+    }
+  });
+  </script>
 
 
 
