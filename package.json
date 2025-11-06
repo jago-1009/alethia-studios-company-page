@@ -1,0 +1,7 @@
+{
+  "name": "resend-form",
+  "type": "module",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}

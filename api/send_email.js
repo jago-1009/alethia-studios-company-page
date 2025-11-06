@@ -21,7 +21,7 @@
           `
         try {
           await resend.emails.send({
-            from: 'alethiastudiosllc@gmail.com', // Must be a verified sender in Resend
+            from: 'alethiastudiosllc@gmail.com', 
             to: 'alethiastudiosllc@gmail.com',
             subject: subject,
             html: body,
